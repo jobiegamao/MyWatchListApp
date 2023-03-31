@@ -13,7 +13,9 @@ class MainTabBarViewController: UITabBarController {
 	private let rootvc = [
 		HomeViewController(),
 		SearchViewController(),
-		MyWatchlistViewController()
+		AddViewController(),
+		MyWatchlistViewController(),
+		ProfileViewController()
 	]
 	
 	private lazy var tabs: [UINavigationController] = rootvc.map{ vc in
@@ -21,31 +23,49 @@ class MainTabBarViewController: UITabBarController {
 	}
 	
 	private let tabImage = [
-		"house",
+		"rectangle.and.hand.point.up.left.filled",
 		"magnifyingglass",
+		"plus.circle",
 		"play.rectangle.on.rectangle",
+		"person.crop.circle"
 	]
 	
 	private let tabImage_selected = [
-		"house.fill",
-		"",
+		"rectangle.and.hand.point.up.left.fill",
+		"magnifyingglass.circle.fill",
+		"plus.circle.fill",
 		"play.rectangle.on.rectangle.fill",
+		"person.crop.circle.fill"
 	]
 	
 	private let tabTitles = [
 		"Explore",
 		"Search",
-		"My Watchlist"
+		"",
+		"My Watchlist",
+		"Profile"
 	]
+	
+	
 	
 	
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		view.backgroundColor = .systemBackground
-		tabBar.tintColor = .label
-		tabBar.layer.zPosition = 99
 		
+		// Set the tab bar appearance
+		tabBar.layer.masksToBounds = true
+		tabBar.isTranslucent = true
+		tabBar.layer.cornerRadius = 50
+		tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+
+		// Set the selected item tint color to white
+		tabBar.tintColor = UIColor(named: "AccentColor")
+		// Bring the tab bar to the front
+		view.bringSubviewToFront(tabBar)
+
+
+
 		
 		for (index, tab) in tabs.enumerated() {
 			tab.tabBarItem.image = UIImage(systemName: tabImage[index])

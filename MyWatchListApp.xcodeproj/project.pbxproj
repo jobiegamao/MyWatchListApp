@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6CCB9DDB29C11CD1006432A2 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCB9DDA29C11CD1006432A2 /* AddViewController.swift */; };
+		6CCB9DDE29C1F8EE006432A2 /* FilmTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCB9DDD29C1F8EE006432A2 /* FilmTableViewCell.swift */; };
+		6CCB9DE029C1FDF5006432A2 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCB9DDF29C1FDF5006432A2 /* ReminderViewController.swift */; };
+		6CCB9DE229C1FE22006432A2 /* ReminderViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCB9DE129C1FE22006432A2 /* ReminderViewViewModel.swift */; };
+		6CCB9DE429C207DC006432A2 /* MyWatchlistViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCB9DE329C207DC006432A2 /* MyWatchlistViewViewModel.swift */; };
 		6CCDC0DA29BB92DD00677F2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC0D929BB92DD00677F2F /* AppDelegate.swift */; };
 		6CCDC0DC29BB92DD00677F2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC0DB29BB92DD00677F2F /* SceneDelegate.swift */; };
 		6CCDC0E429BB92DD00677F2F /* MyWatchListApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC0E229BB92DD00677F2F /* MyWatchListApp.xcdatamodeld */; };
@@ -26,10 +31,49 @@
 		6CCDC12D29BB9CD800677F2F /* MyWatchlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC11229BB9CD800677F2F /* MyWatchlistViewController.swift */; };
 		6CCDC12E29BB9CD800677F2F /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC11429BB9CD800677F2F /* MainTabBarViewController.swift */; };
 		6CCDC13C29BBA0A200677F2F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC13B29BBA0A200677F2F /* HomeViewController.swift */; };
-		6CCDC13E29BBA0B600677F2F /* SearchViewControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC13D29BBA0B600677F2F /* SearchViewControllerViewController.swift */; };
+		6CCDC13E29BBA0B600677F2F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC13D29BBA0B600677F2F /* SearchViewController.swift */; };
+		6CCDC14529BC71C300677F2F /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC14029BC71C300677F2F /* StorageManager.swift */; };
+		6CCDC14629BC71C300677F2F /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC14129BC71C300677F2F /* APICaller.swift */; };
+		6CCDC14829BC71C300677F2F /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC14329BC71C300677F2F /* AuthManager.swift */; };
+		6CCDC14929BC71C300677F2F /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC14429BC71C300677F2F /* DatabaseManager.swift */; };
+		6CCDC15229BC721D00677F2F /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC14B29BC721D00677F2F /* Genre.swift */; };
+		6CCDC15329BC721D00677F2F /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC14C29BC721D00677F2F /* Film.swift */; };
+		6CCDC15629BC721D00677F2F /* RemindMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC14F29BC721D00677F2F /* RemindMe.swift */; };
+		6CCDC15729BC721D00677F2F /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC15029BC721D00677F2F /* UserAccount.swift */; };
+		6CCDC15829BC721D00677F2F /* YoutubeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC15129BC721D00677F2F /* YoutubeResponse.swift */; };
+		6CCDC15A29BC748100677F2F /* FilmPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC15929BC748100677F2F /* FilmPlaylist.swift */; };
+		6CCDC15C29BC760300677F2F /* Ratings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC15B29BC760300677F2F /* Ratings.swift */; };
+		6CCDC16129BC76E100677F2F /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC15E29BC76E100677F2F /* SignUpViewController.swift */; };
+		6CCDC16229BC76E100677F2F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC15F29BC76E100677F2F /* LoginViewController.swift */; };
+		6CCDC16329BC76E100677F2F /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC16029BC76E100677F2F /* OnboardingViewController.swift */; };
+		6CCDC16629BC778400677F2F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 6CCDC16529BC778400677F2F /* SDWebImage */; };
+		6CCDC17329BC77D100677F2F /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC16929BC77D100677F2F /* ProfileButton.swift */; };
+		6CCDC17729BC77D100677F2F /* ShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC16E29BC77D100677F2F /* ShareButton.swift */; };
+		6CCDC17A29BC77D100677F2F /* ButtonImageAndText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC17129BC77D100677F2F /* ButtonImageAndText.swift */; };
+		6CCDC17B29BC77D100677F2F /* BoxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC17229BC77D100677F2F /* BoxButton.swift */; };
+		6CCDC17E29BC799F00677F2F /* CustomTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC17D29BC799F00677F2F /* CustomTextfield.swift */; };
+		6CCDC18129BC79DF00677F2F /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC18029BC79DF00677F2F /* AuthViewModel.swift */; };
+		6CCDC18329BC7BD400677F2F /* HomeViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC18229BC7BD400677F2F /* HomeViewViewModel.swift */; };
+		6CCDC18629BC7CA000677F2F /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC18529BC7CA000677F2F /* Global.swift */; };
+		6CCDC18829BC7D7A00677F2F /* FilmDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC18729BC7D7A00677F2F /* FilmDetailViewController.swift */; };
+		6CCDC18F29BC9A4100677F2F /* VideoTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC18E29BC9A4100677F2F /* VideoTabView.swift */; };
+		6CCDC19129BCA7F000677F2F /* SectionBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC19029BCA7F000677F2F /* SectionBarView.swift */; };
+		6CCDC19429BCD30E00677F2F /* UpcomingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC19329BCD30E00677F2F /* UpcomingTableViewCell.swift */; };
+		6CCDC19629BCD3E200677F2F /* ReusableViewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC19529BCD3E200677F2F /* ReusableViewsView.swift */; };
+		6CCDC19829BCD7A500677F2F /* PopularTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC19729BCD7A500677F2F /* PopularTableViewCell.swift */; };
+		6CCDC19B29BCD88100677F2F /* TopFilmsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC19A29BCD88100677F2F /* TopFilmsTableViewCell.swift */; };
+		6CCDC19D29BCDF5D00677F2F /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC19C29BCDF5D00677F2F /* SearchResultsViewController.swift */; };
+		6CCDC1A129BCE0FE00677F2F /* FilmCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC1A029BCE0FE00677F2F /* FilmCollectionViewCell.swift */; };
+		6CCDC1A329BCE13000677F2F /* PosterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC1A229BCE13000677F2F /* PosterImageView.swift */; };
+		6CCDC1A529BCF7EB00677F2F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCDC1A429BCF7EB00677F2F /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6CCB9DDA29C11CD1006432A2 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		6CCB9DDD29C1F8EE006432A2 /* FilmTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableViewCell.swift; sourceTree = "<group>"; };
+		6CCB9DDF29C1FDF5006432A2 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
+		6CCB9DE129C1FE22006432A2 /* ReminderViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewViewModel.swift; sourceTree = "<group>"; };
+		6CCB9DE329C207DC006432A2 /* MyWatchlistViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWatchlistViewViewModel.swift; sourceTree = "<group>"; };
 		6CCDC0D629BB92DD00677F2F /* MyWatchListApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyWatchListApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CCDC0D929BB92DD00677F2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CCDC0DB29BB92DD00677F2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,7 +86,40 @@
 		6CCDC11229BB9CD800677F2F /* MyWatchlistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyWatchlistViewController.swift; sourceTree = "<group>"; };
 		6CCDC11429BB9CD800677F2F /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		6CCDC13B29BBA0A200677F2F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		6CCDC13D29BBA0B600677F2F /* SearchViewControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewControllerViewController.swift; sourceTree = "<group>"; };
+		6CCDC13D29BBA0B600677F2F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		6CCDC14029BC71C300677F2F /* StorageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		6CCDC14129BC71C300677F2F /* APICaller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		6CCDC14329BC71C300677F2F /* AuthManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		6CCDC14429BC71C300677F2F /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		6CCDC14B29BC721D00677F2F /* Genre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		6CCDC14C29BC721D00677F2F /* Film.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		6CCDC14F29BC721D00677F2F /* RemindMe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemindMe.swift; sourceTree = "<group>"; };
+		6CCDC15029BC721D00677F2F /* UserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
+		6CCDC15129BC721D00677F2F /* YoutubeResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoutubeResponse.swift; sourceTree = "<group>"; };
+		6CCDC15929BC748100677F2F /* FilmPlaylist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmPlaylist.swift; sourceTree = "<group>"; };
+		6CCDC15B29BC760300677F2F /* Ratings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ratings.swift; sourceTree = "<group>"; };
+		6CCDC15E29BC76E100677F2F /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		6CCDC15F29BC76E100677F2F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6CCDC16029BC76E100677F2F /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		6CCDC16929BC77D100677F2F /* ProfileButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileButton.swift; sourceTree = "<group>"; };
+		6CCDC16E29BC77D100677F2F /* ShareButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareButton.swift; sourceTree = "<group>"; };
+		6CCDC17129BC77D100677F2F /* ButtonImageAndText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonImageAndText.swift; sourceTree = "<group>"; };
+		6CCDC17229BC77D100677F2F /* BoxButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoxButton.swift; sourceTree = "<group>"; };
+		6CCDC17D29BC799F00677F2F /* CustomTextfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextfield.swift; sourceTree = "<group>"; };
+		6CCDC18029BC79DF00677F2F /* AuthViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		6CCDC18229BC7BD400677F2F /* HomeViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewViewModel.swift; sourceTree = "<group>"; };
+		6CCDC18529BC7CA000677F2F /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		6CCDC18729BC7D7A00677F2F /* FilmDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmDetailViewController.swift; sourceTree = "<group>"; };
+		6CCDC18E29BC9A4100677F2F /* VideoTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoTabView.swift; sourceTree = "<group>"; };
+		6CCDC19029BCA7F000677F2F /* SectionBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionBarView.swift; sourceTree = "<group>"; };
+		6CCDC19329BCD30E00677F2F /* UpcomingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingTableViewCell.swift; sourceTree = "<group>"; };
+		6CCDC19529BCD3E200677F2F /* ReusableViewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewsView.swift; sourceTree = "<group>"; };
+		6CCDC19729BCD7A500677F2F /* PopularTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularTableViewCell.swift; sourceTree = "<group>"; };
+		6CCDC19A29BCD88100677F2F /* TopFilmsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopFilmsTableViewCell.swift; sourceTree = "<group>"; };
+		6CCDC19C29BCDF5D00677F2F /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		6CCDC1A029BCE0FE00677F2F /* FilmCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmCollectionViewCell.swift; sourceTree = "<group>"; };
+		6CCDC1A229BCE13000677F2F /* PosterImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PosterImageView.swift; sourceTree = "<group>"; };
+		6CCDC1A429BCF7EB00677F2F /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +131,7 @@
 				6CCDC0F829BB999100677F2F /* FirebaseDatabase in Frameworks */,
 				6CCDC0F429BB999100677F2F /* FirebaseAuth in Frameworks */,
 				6CCDC10029BB999100677F2F /* FirebaseFirestoreSwift in Frameworks */,
+				6CCDC16629BC778400677F2F /* SDWebImage in Frameworks */,
 				6CCDC0FE29BB999100677F2F /* FirebaseFirestoreCombine-Community in Frameworks */,
 				6CCDC10229BB999100677F2F /* FirebaseStorage in Frameworks */,
 				6CCDC0FC29BB999100677F2F /* FirebaseFirestore in Frameworks */,
@@ -84,10 +162,15 @@
 		6CCDC0D829BB92DD00677F2F /* MyWatchListApp */ = {
 			isa = PBXGroup;
 			children = (
+				6CCDC18429BC7C9100677F2F /* Resources */,
+				6CCDC13F29BC71C300677F2F /* Managers */,
 				6CCDC10529BB99D200677F2F /* Privates */,
+				6CCDC14A29BC721D00677F2F /* Model */,
+				6CCDC17F29BC79B400677F2F /* ViewModel */,
+				6CCDC16729BC77B400677F2F /* Views */,
+				6CCDC10929BB9CD800677F2F /* Controllers */,
 				6CCDC0D929BB92DD00677F2F /* AppDelegate.swift */,
 				6CCDC0DB29BB92DD00677F2F /* SceneDelegate.swift */,
-				6CCDC10929BB9CD800677F2F /* Controllers */,
 				6CCDC0E529BB92DF00677F2F /* Assets.xcassets */,
 				6CCDC0E729BB92DF00677F2F /* LaunchScreen.storyboard */,
 				6CCDC0EA29BB92DF00677F2F /* Info.plist */,
@@ -127,8 +210,10 @@
 			isa = PBXGroup;
 			children = (
 				6CCDC13B29BBA0A200677F2F /* HomeViewController.swift */,
-				6CCDC13D29BBA0B600677F2F /* SearchViewControllerViewController.swift */,
+				6CCDC13D29BBA0B600677F2F /* SearchViewController.swift */,
+				6CCB9DDA29C11CD1006432A2 /* AddViewController.swift */,
 				6CCDC11229BB9CD800677F2F /* MyWatchlistViewController.swift */,
+				6CCDC1A429BCF7EB00677F2F /* ProfileViewController.swift */,
 			);
 			path = Tabs;
 			sourceTree = "<group>";
@@ -144,8 +229,143 @@
 		6CCDC11529BB9CD800677F2F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				6CCDC15D29BC76C000677F2F /* Onboarding */,
+				6CCDC18729BC7D7A00677F2F /* FilmDetailViewController.swift */,
+				6CCDC19C29BCDF5D00677F2F /* SearchResultsViewController.swift */,
+				6CCB9DDF29C1FDF5006432A2 /* ReminderViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		6CCDC13F29BC71C300677F2F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				6CCDC14029BC71C300677F2F /* StorageManager.swift */,
+				6CCDC14129BC71C300677F2F /* APICaller.swift */,
+				6CCDC14329BC71C300677F2F /* AuthManager.swift */,
+				6CCDC14429BC71C300677F2F /* DatabaseManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		6CCDC14A29BC721D00677F2F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6CCDC14B29BC721D00677F2F /* Genre.swift */,
+				6CCDC14C29BC721D00677F2F /* Film.swift */,
+				6CCDC14F29BC721D00677F2F /* RemindMe.swift */,
+				6CCDC15029BC721D00677F2F /* UserAccount.swift */,
+				6CCDC15129BC721D00677F2F /* YoutubeResponse.swift */,
+				6CCDC15929BC748100677F2F /* FilmPlaylist.swift */,
+				6CCDC15B29BC760300677F2F /* Ratings.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6CCDC15D29BC76C000677F2F /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				6CCDC16029BC76E100677F2F /* OnboardingViewController.swift */,
+				6CCDC15F29BC76E100677F2F /* LoginViewController.swift */,
+				6CCDC15E29BC76E100677F2F /* SignUpViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		6CCDC16729BC77B400677F2F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6CCDC19E29BCE0CF00677F2F /* CollectionViewCell */,
+				6CCDC19229BCD2D200677F2F /* Home */,
+				6CCDC18B29BC911400677F2F /* TableViewCell */,
+				6CCDC17C29BC798B00677F2F /* Textfields */,
+				6CCDC16829BC77D100677F2F /* Buttons */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6CCDC16829BC77D100677F2F /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				6CCDC16929BC77D100677F2F /* ProfileButton.swift */,
+				6CCDC16A29BC77D100677F2F /* ButtonImageAndTextButtons */,
+				6CCDC17129BC77D100677F2F /* ButtonImageAndText.swift */,
+				6CCDC17229BC77D100677F2F /* BoxButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		6CCDC16A29BC77D100677F2F /* ButtonImageAndTextButtons */ = {
+			isa = PBXGroup;
+			children = (
+				6CCDC16E29BC77D100677F2F /* ShareButton.swift */,
+			);
+			path = ButtonImageAndTextButtons;
+			sourceTree = "<group>";
+		};
+		6CCDC17C29BC798B00677F2F /* Textfields */ = {
+			isa = PBXGroup;
+			children = (
+				6CCDC17D29BC799F00677F2F /* CustomTextfield.swift */,
+			);
+			path = Textfields;
+			sourceTree = "<group>";
+		};
+		6CCDC17F29BC79B400677F2F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6CCDC18029BC79DF00677F2F /* AuthViewModel.swift */,
+				6CCDC18229BC7BD400677F2F /* HomeViewViewModel.swift */,
+				6CCB9DE129C1FE22006432A2 /* ReminderViewViewModel.swift */,
+				6CCB9DE329C207DC006432A2 /* MyWatchlistViewViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6CCDC18429BC7C9100677F2F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6CCDC18529BC7CA000677F2F /* Global.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6CCDC18B29BC911400677F2F /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6CCB9DDD29C1F8EE006432A2 /* FilmTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		6CCDC19229BCD2D200677F2F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6CCDC19929BCD7AE00677F2F /* FilmTableCells */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6CCDC19929BCD7AE00677F2F /* FilmTableCells */ = {
+			isa = PBXGroup;
+			children = (
+				6CCDC19329BCD30E00677F2F /* UpcomingTableViewCell.swift */,
+				6CCDC19729BCD7A500677F2F /* PopularTableViewCell.swift */,
+				6CCDC19A29BCD88100677F2F /* TopFilmsTableViewCell.swift */,
+				6CCDC19529BCD3E200677F2F /* ReusableViewsView.swift */,
+				6CCDC18E29BC9A4100677F2F /* VideoTabView.swift */,
+				6CCDC19029BCA7F000677F2F /* SectionBarView.swift */,
+			);
+			path = FilmTableCells;
+			sourceTree = "<group>";
+		};
+		6CCDC19E29BCE0CF00677F2F /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				6CCDC1A029BCE0FE00677F2F /* FilmCollectionViewCell.swift */,
+				6CCDC1A229BCE13000677F2F /* PosterImageView.swift */,
+			);
+			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +394,7 @@
 				6CCDC0FF29BB999100677F2F /* FirebaseFirestoreSwift */,
 				6CCDC10129BB999100677F2F /* FirebaseStorage */,
 				6CCDC10329BB999100677F2F /* FirebaseStorageCombine-Community */,
+				6CCDC16529BC778400677F2F /* SDWebImage */,
 			);
 			productName = MyWatchListApp;
 			productReference = 6CCDC0D629BB92DD00677F2F /* MyWatchListApp.app */;
@@ -205,6 +426,7 @@
 			mainGroup = 6CCDC0CD29BB92DD00677F2F;
 			packageReferences = (
 				6CCDC0F229BB999100677F2F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				6CCDC16429BC778400677F2F /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 6CCDC0D729BB92DD00677F2F /* Products */;
 			projectDirPath = "";
@@ -233,14 +455,52 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CCDC17729BC77D100677F2F /* ShareButton.swift in Sources */,
+				6CCDC19D29BCDF5D00677F2F /* SearchResultsViewController.swift in Sources */,
+				6CCB9DDB29C11CD1006432A2 /* AddViewController.swift in Sources */,
+				6CCDC16229BC76E100677F2F /* LoginViewController.swift in Sources */,
+				6CCDC17329BC77D100677F2F /* ProfileButton.swift in Sources */,
 				6CCDC12D29BB9CD800677F2F /* MyWatchlistViewController.swift in Sources */,
+				6CCDC19829BCD7A500677F2F /* PopularTableViewCell.swift in Sources */,
+				6CCDC14829BC71C300677F2F /* AuthManager.swift in Sources */,
+				6CCB9DE029C1FDF5006432A2 /* ReminderViewController.swift in Sources */,
+				6CCDC15729BC721D00677F2F /* UserAccount.swift in Sources */,
+				6CCDC19B29BCD88100677F2F /* TopFilmsTableViewCell.swift in Sources */,
+				6CCDC14929BC71C300677F2F /* DatabaseManager.swift in Sources */,
 				6CCDC10729BB9B3100677F2F /* API_KEYS.swift in Sources */,
+				6CCDC19129BCA7F000677F2F /* SectionBarView.swift in Sources */,
 				6CCDC0E429BB92DD00677F2F /* MyWatchListApp.xcdatamodeld in Sources */,
+				6CCB9DE429C207DC006432A2 /* MyWatchlistViewViewModel.swift in Sources */,
+				6CCDC15629BC721D00677F2F /* RemindMe.swift in Sources */,
+				6CCB9DE229C1FE22006432A2 /* ReminderViewViewModel.swift in Sources */,
+				6CCDC14629BC71C300677F2F /* APICaller.swift in Sources */,
+				6CCDC16329BC76E100677F2F /* OnboardingViewController.swift in Sources */,
+				6CCDC17A29BC77D100677F2F /* ButtonImageAndText.swift in Sources */,
+				6CCDC14529BC71C300677F2F /* StorageManager.swift in Sources */,
+				6CCDC15829BC721D00677F2F /* YoutubeResponse.swift in Sources */,
+				6CCDC1A329BCE13000677F2F /* PosterImageView.swift in Sources */,
 				6CCDC12E29BB9CD800677F2F /* MainTabBarViewController.swift in Sources */,
+				6CCDC19429BCD30E00677F2F /* UpcomingTableViewCell.swift in Sources */,
 				6CCDC0DA29BB92DD00677F2F /* AppDelegate.swift in Sources */,
+				6CCDC18829BC7D7A00677F2F /* FilmDetailViewController.swift in Sources */,
+				6CCDC15229BC721D00677F2F /* Genre.swift in Sources */,
+				6CCDC17E29BC799F00677F2F /* CustomTextfield.swift in Sources */,
 				6CCDC0DC29BB92DD00677F2F /* SceneDelegate.swift in Sources */,
+				6CCDC16129BC76E100677F2F /* SignUpViewController.swift in Sources */,
+				6CCDC17B29BC77D100677F2F /* BoxButton.swift in Sources */,
 				6CCDC13C29BBA0A200677F2F /* HomeViewController.swift in Sources */,
-				6CCDC13E29BBA0B600677F2F /* SearchViewControllerViewController.swift in Sources */,
+				6CCDC18629BC7CA000677F2F /* Global.swift in Sources */,
+				6CCDC1A129BCE0FE00677F2F /* FilmCollectionViewCell.swift in Sources */,
+				6CCDC18329BC7BD400677F2F /* HomeViewViewModel.swift in Sources */,
+				6CCDC13E29BBA0B600677F2F /* SearchViewController.swift in Sources */,
+				6CCDC18F29BC9A4100677F2F /* VideoTabView.swift in Sources */,
+				6CCB9DDE29C1F8EE006432A2 /* FilmTableViewCell.swift in Sources */,
+				6CCDC18129BC79DF00677F2F /* AuthViewModel.swift in Sources */,
+				6CCDC1A529BCF7EB00677F2F /* ProfileViewController.swift in Sources */,
+				6CCDC15C29BC760300677F2F /* Ratings.swift in Sources */,
+				6CCDC15329BC721D00677F2F /* Film.swift in Sources */,
+				6CCDC19629BCD3E200677F2F /* ReusableViewsView.swift in Sources */,
+				6CCDC15A29BC748100677F2F /* FilmPlaylist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +718,14 @@
 				minimumVersion = 9.6.0;
 			};
 		};
+		6CCDC16429BC778400677F2F /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 5.9.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -505,6 +773,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6CCDC0F229BB999100677F2F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseStorageCombine-Community";
+		};
+		6CCDC16529BC778400677F2F /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6CCDC16429BC778400677F2F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 

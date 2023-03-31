@@ -1,5 +1,5 @@
 //
-//  SearchViewController.swift
+//  FilmDetailViewController.swift
 //  MyWatchListApp
 //
 //  Created by may on 3/11/23.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class FilmDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

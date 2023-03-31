@@ -1,23 +1,28 @@
-
-//  MyWatchlistViewController.swift
+//
+//  SearchResultsViewController.swift
 //  MyWatchListApp
 //
-//  Created by may on 3/11/23.
+//  Created by may on 3/12/23.
 //
+
 import UIKit
-import Combine
 
-class MyWatchlistViewController: UIViewController {
+protocol SearchResultsViewControllerDelagate: AnyObject {
+	
+}
 
-	private let viewModel = MyWatchlistViewViewModel()
-	private var subscriptions: Set<AnyCancellable> = []
+class SearchResultsViewController: UIViewController {
+
+	var films: [Film] = [Film]()
+	
+	weak var delegate: SearchResultsViewControllerDelagate?
 	
 	private var itemsPerRow: CGFloat {
 		let landscape = UIScreen.main.bounds.width > UIScreen.main.bounds.height
 		return landscape ? 6 : 3
 	}
 	private let spacing: CGFloat = 10
-	private lazy var resultsCollectionView: UICollectionView = {
+	public lazy var resultsCollectionView: UICollectionView = {
 		let layout = UICollectionViewFlowLayout()
 		layout.minimumInteritemSpacing = spacing
 		layout.minimumLineSpacing = spacing
@@ -33,11 +38,8 @@ class MyWatchlistViewController: UIViewController {
 	// MARK: - Main
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		view.backgroundColor = .systemBackground
 		
 		view.addSubview(resultsCollectionView)
-		
-		bindViews()
 	}
 	
 	override func viewDidLayoutSubviews() {
@@ -46,71 +48,34 @@ class MyWatchlistViewController: UIViewController {
 		
 	}
 	
-	override func viewWillAppear(_ animated: Bool) {
-		super.viewWillAppear(animated)
-		
-		viewModel.retrievePlaylist(playlist_title: PlaylistTitle.Watched.rawValue)
-	}
-	
 	override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
 		super.viewWillTransition(to: size, with: coordinator)
 		
 		resultsCollectionView.collectionViewLayout.invalidateLayout()
 	}
 	
-	// MARK: - Private Methods
-	
-	private var playlists: [String: FilmPlaylist] = [:]
-	private func bindViews(){
-		viewModel.$films
-			.sink { [weak self] playlists in
-				self?.playlists = playlists
-				self?.resultsCollectionView.reloadData()
-			}
-			.store(in: &subscriptions)
-		
-		
-	}
-	
 
 }
 
-extension MyWatchlistViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension SearchResultsViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+	
 	
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilmCollectionViewCell.identifier, for: indexPath) as? FilmCollectionViewCell,
-			  let watchedList = playlists[PlaylistTitle.Watched.rawValue]?.films
-		else {return UICollectionViewCell() }
+		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilmCollectionViewCell.identifier, for: indexPath) as? FilmCollectionViewCell else {return UICollectionViewCell() }
 		
-		
-		//watched
-		cell.configure(with: watchedList[indexPath.row])
+		cell.configure(with: films[indexPath.row])
 		return cell
 	}
 	
-
-	
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		guard let watchedList = playlists[PlaylistTitle.Watched.rawValue]?.films else { return 0 }
-		return watchedList.count
+		return films.count
 	}
 	
 	func numberOfSections(in collectionView: UICollectionView) -> Int {
 		return 1
 	}
 	
-	func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-		collectionView.deselectItem(at: indexPath, animated: true)
-		
-//		let selected = viewModel.myListFilms[indexPath.row]
-//		 
-//		let vc = FilmDetailsViewController()
-//		vc.configure(model: selected)
-//		present(vc, animated: true)
-		
-	}
-
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 	
 		let totalSpacing = (itemsPerRow - 1) * spacing
@@ -122,5 +87,3 @@ extension MyWatchlistViewController: UICollectionViewDelegate, UICollectionViewD
 	
 
 }
-
-
